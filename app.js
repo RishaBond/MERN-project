@@ -3,7 +3,7 @@ const userRouter = require('./routes/users');
 const config = require('config');
 const mongoose = require('mongoose');
 const app = express()
-const PORT = config.get('port') || 5000;
+const PORT = config.get('port') || 5001;
 
 
 async function start() {
