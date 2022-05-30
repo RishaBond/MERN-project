@@ -1,10 +1,10 @@
-const express = require('express')
+const express = require('express');
 const userRouter = require('./routes/users');
 const config = require('config');
 const mongoose = require('mongoose');
-const app = express()
+const bodyParser = require('body-parser');
+const app = express();
 const PORT = config.get('port') || 5001;
-
 
 async function start() {
     try {
@@ -19,17 +19,19 @@ async function start() {
 }
 start();
 
+app.use(bodyParser.json());
+
 app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+    res.send('Hello World!');
+});
 
 app.get('/rnd', (req, res) => {
     res.json({ number: Math.random(), text: 'hello!' });
-})
+});
 
 app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`)
-})
+    console.log(`Example app listening on port ${PORT}`);
+});
 
 app.use('/auth', require('./routes/auth'));
 

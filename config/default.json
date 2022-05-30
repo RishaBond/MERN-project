@@ -1,5 +1,5 @@
 {
     "port": 8000,
-    "jwtSecret": "krya krya krya",
-    "mongoUri": "mongodb+srv://RishaBond:<25364964>@cluster0.egm1x.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    "jwtSecret": "krya",
+    "mongoUri": "mongodb://docker:mongopw@localhost:55000/admin"
 }
