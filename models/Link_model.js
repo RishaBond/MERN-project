@@ -19,8 +19,13 @@ const schema = new Schema({
         type: Date,
         default: Date.now,
     },
+    clicks: {
+        type: Number,
+        default: 0,
+    },
     owner: {
         type: Types.ObjectId,
+        ref: 'User',
     },
 });
 

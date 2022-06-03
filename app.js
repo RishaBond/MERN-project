@@ -21,6 +21,8 @@ start();
 
 app.use(bodyParser.json());
 
+app.use('/api/link', require('./routes/link'));
+
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });
